@@ -31,7 +31,7 @@ jobs:
       run: |2
 
         docker build . --file Dockerfile -t 975032674314.dkr.ecr.ca-central-1.amazonaws.com/colorado-registry:$(git rev-parse --short HEAD)
-        docker push 975032674314.dkr.ecr.ca-central-1.amazonaws.com/colorado-registry:$(git rev-parse --short HEAD)
+        sudo docker push 975032674314.dkr.ecr.ca-central-1.amazonaws.com/colorado-registry:$(git rev-parse --short HEAD)
     - name: Deploy on Porter
       id: deploy_porter
       run: |2
